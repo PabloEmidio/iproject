@@ -8,11 +8,13 @@ install_project()
    # Create project dir
    PROJECT_DIR=$HOME/$PROJECT_DIR_NAME
    mkdir -p $PROJECT_DIR
+   mkdir -p $PROJECT_DIR/bin
 
    # Copy project files to project dir
    CURRENT_DIR=$(dirname "$0")
-   chmod +x $CURRENT_DIR/iproject/bin/iproject
-   cp -r $CURRENT_DIR/iproject/* $PROJECT_DIR/
+   chmod +x $CURRENT_DIR/iproject.sh
+   cp -R $CURRENT_DIR/iproject/* $PROJECT_DIR/.
+   cp $CURRENT_DIR/iproject.sh $PROJECT_DIR/bin/iproject
 }
 
 
